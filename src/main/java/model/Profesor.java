@@ -5,7 +5,7 @@ public class Profesor {
     private String firstName;
     private String email;
     private String Title;
-    private int phoneNumber;
+    private String phoneNumber;
     private int yearOfEmployment;
     private boolean active;
 
@@ -25,7 +25,7 @@ public class Profesor {
         title = title;
     }
 
-    public void setPhoneNumber(int phoneNumber) {
+    public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
 

@@ -1,15 +1,15 @@
 package model;
 
 public class Courses {
-    String nume;
-    String prescurtare;
-    String detalii;
+    String name;
+    String shortName;
+    String details;
     Profesor profesori;
 
     public Courses(String nume, String prescurtare, String detalii, Profesor profesori){
-        this.nume = nume;
-        this.prescurtare = prescurtare;
-        this.detalii = detalii;
+        this.name = name;
+        this.shortName = shortName;
+        this.details = details;
         this.profesori = profesori;
 
     }
