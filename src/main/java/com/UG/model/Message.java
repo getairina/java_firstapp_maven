@@ -1,4 +1,4 @@
-package model;/*
+package com.UG.model;/*
    Mesaj
 Student - obligatoriu, Studentul care a transmis mesajul
 Timp - data si timpul, obligatoriu. Timpul exact la care a fost transmis cu precizie cat mai mare (e.g. milisecunde). Precizia este necesara pentru ordonare cronologica.
@@ -25,8 +25,6 @@ public class Message{
         validate();
     }
 
-
-
     public LocalDateTime getDateTime() {
         return dateTime;
     }
@@ -42,7 +40,6 @@ public class Message{
     public void setMessage(String message) {
         this.message = message;
     }
-
 
     private boolean messageHasContent(String text) {
         String EMPTY_STRING = "";
@@ -76,5 +73,4 @@ public class Message{
             throw ex;
         }
     }
-
 }

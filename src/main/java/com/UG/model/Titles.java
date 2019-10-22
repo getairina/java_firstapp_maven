@@ -1,7 +1,10 @@
-package model;
+package com.UG.model;
 
+/**
+ *
+ */
 public enum Titles {
-    AS ("ASSISTANTPROFESSOR"),
+    AS ("ASSISTANT"),
     ASSOC("ASSOCIATEPROFESSOR"),
     PROF("PROFESSOR");
 

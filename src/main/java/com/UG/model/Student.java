@@ -1,4 +1,4 @@
-package model;
+package com.UG.model;
 /*
         Nume - text, obligatoriu *
         Prenume - text, obligatoriu *
@@ -7,10 +7,18 @@ package model;
         Telefon - text, validare format
         Grupa - numeric, intre 1 si 10. Reprezinta grupa din care face parte studentul
 */
+
+import javax.persistence.*;
 import java.util.Date;
 
+@Entity
+@Table
 public class Student {
-    //Student - Olimpia, Ariana, Simona
+
+    @Id
+    @Column(name = "id")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
 
     private String firstName;
     private String lastName;
@@ -68,7 +76,6 @@ public class Student {
     public void setLastName(String lastName) {
         if (lastName != null && !"".equals(lastName)) {
             this.lastName = lastName;
-
         }
     }
 
@@ -97,7 +104,6 @@ public class Student {
             System.out.println("ERROR. Invalid e-mail adress!");
         }
         return eMail;
-
     }
 
     public int checkGroup(int group) {
@@ -105,6 +111,5 @@ public class Student {
             System.out.println("Error: Invalid Group");
         }
         return group;
-
     }
 }

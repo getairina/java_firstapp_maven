@@ -1,22 +1,30 @@
-package model;
+package com.UG.model;
 
 import java.util.List;
 
 public class Group {
     private int idGroup;     //- numeric,obligatoriu intre 1 si 10.
+    private String groupName;
     private int year;        //obligatoriu intre 1 si 6. Reprezinta anul din care face parte grupa.
     private List<Student> students; //studenti - lista de studenti
     private List<Message> messages; //mesaje //- lista de mesaje asociate grupei
 
     public Group(int idGroup, int year, List<Student> students, List<Message> messages) {
 
-
         this.idGroup = checkForIdGroupRange(idGroup);
+        this.groupName = groupName;
         this.year = checkForYearRange(year);
         this.students = students;
         this.messages = messages;
     }
 
+    public String getGroupName() {
+        return groupName;
+    }
+
+    public void setGroupName(String groupName) {
+        this.groupName = groupName;
+    }
 
     public int getIdGroup() {
         return idGroup;
@@ -46,23 +54,18 @@ public class Group {
         this.messages = messages;
     }
 
-
     private int checkForIdGroupRange(int idGroup) {
         if(idGroup < 1 || idGroup > 10){
             throw new IllegalArgumentException("The group doesn't exist.");
         }else{
             return idGroup;
         }
-
     }
     private int checkForYearRange(int year) {
-
         if(year < 1 || year > 6){
             throw new IllegalArgumentException("Year not in range 1-6.");
         }else{
             return year;
         }
     }
-
-
 }

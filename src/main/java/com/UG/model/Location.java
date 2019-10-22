@@ -1,11 +1,13 @@
-package model;
+package com.UG.model;
 public class Location {
-    // Bogdan si Ciprian
+    private int id;
     private String name;
     private int capacity;
     private boolean available;
     private String address;
+
     public Location(String name, int capacity, boolean available, String address) {
+        this.id = id;
         this.name = name;
         this.capacity = capacity;
         this.available = available;
@@ -32,6 +34,11 @@ public class Location {
             throw new IllegalArgumentException("Please complete Adress section");
         }
     }
+
+    public int getId() {
+        return id;
+    }
+
     public String getName() {
         return name;
     }
@@ -44,6 +51,11 @@ public class Location {
     public String getAddress() {
         return address;
     }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
     public void setName(String name) {
         this.name = name;
     }
